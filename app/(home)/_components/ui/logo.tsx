@@ -23,7 +23,7 @@ const letterVariants = {
 };
 
 export default function Logo() {
-  const letters = 'MDRJ'.split('');
+  const letters = "S".split("");
 
   return (
     <Link href="/">
@@ -54,7 +54,7 @@ export default function Logo() {
           ))}
         </div>
         <p className="ml-2 text-foreground font-semibold hidden xs:block">
-          Rijwan
+          Solaiman
         </p>
       </motion.div>
     </Link>

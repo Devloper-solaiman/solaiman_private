@@ -28,11 +28,13 @@ const cardContainerVariants = {
 };
 
 export default function Blogs({ blogs }: TBlogsProps) {
+  console.log(blogs)
   return (
     <div>
       <Title title1="Blogs" title2="Blogs" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 ">
-        {blogs.map((blog) => (
+
+        {blogs?.map((blog) => (
           <BlogCard key={blog._id} blog={blog} />
         ))}
       </div>
@@ -55,11 +57,11 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       className="border border-default-200 rounded-lg p-6 relative h-auto md:h-[350px]"
     >
       <div className="flex gap-3 items-center">
-        <Avatar size="md" src={blog.author.image} />
+        <Avatar size="md" src={blog.author?.image} />
         <div className="flex flex-col items-start">
-          <h3 className="text-2xl font-bold">{blog.author.name}</h3>
+          <h3 className="text-2xl font-bold">{blog.author?.name}</h3>
           <p className="text-sm text-default-500">
-            Posted on: {new Date(blog.createdAt).toLocaleDateString()}
+            Posted on: {new Date(blog?.createdAt).toLocaleDateString()}
           </p>
         </div>
       </div>
@@ -68,7 +70,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
         height={500}
         alt="Blog image"
         className="w-full md:w-[250px] h-auto my-2 rounded-lg"
-        src={blog.imageUrl}
+        src={blog?.imageUrl}
       />
       <div className="mt-5">
         <Link

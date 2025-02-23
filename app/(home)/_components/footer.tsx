@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-default-200">
           <p className="text-sm text-center text-default-600">
-            © {new Date().getFullYear()} Md Rijwan Jannat. All rights reserved.
+            © {new Date().getFullYear()} Md Sloaiman. All rights reserved.
           </p>
         </div>
       </div>

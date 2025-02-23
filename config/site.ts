@@ -9,82 +9,82 @@ import {
 } from 'react-icons/fa';
 
 export const siteConfig = {
-  name: "Md-Rijwan-Jannat's Portfolio",
-  ogImage: 'https://demo.jpg',
-  url: 'www.rijwanjanant.dev',
+  name: "Md Solaiman",
+  ogImage: "https://demo.jpg",
+  url: "www.solaiman.dev",
   description:
-    'Junior Full Stack Developer specializing in modern web technologies.',
+    "Junior Font End Developer specializing in modern web technologies.",
   navItems: [
     {
-      label: 'Home',
-      href: '#home',
+      label: "Home",
+      href: "#home",
     },
     {
-      label: 'Skills',
-      href: '#skills',
+      label: "Skills",
+      href: "#skills",
     },
     {
-      label: 'Experience',
-      href: '#experience',
+      label: "Experience",
+      href: "#experience",
     },
     {
-      label: 'About',
-      href: '#about',
+      label: "About",
+      href: "#about",
     },
     {
-      label: 'Projects',
-      href: '#projects',
+      label: "Projects",
+      href: "#projects",
     },
     {
-      label: 'Blogs',
-      href: '#blogs',
+      label: "Blogs",
+      href: "#blogs",
     },
     {
-      label: 'Contact',
-      href: '#contact',
+      label: "Contact",
+      href: "#contact",
     },
   ],
 
   dashboardMenuItems: [
-    { name: 'Profile', icon: FaUser, path: '/dashboard' },
+    { name: "Profile", icon: FaUser, path: "/dashboard" },
     {
-      name: 'Skills Management',
+      name: "Skills Management",
       icon: FaLaptopCode,
-      path: '/dashboard/skills-management',
+      path: "/dashboard/skills-management",
     },
     {
-      name: 'Projects Management',
+      name: "Projects Management",
       icon: FaProjectDiagram,
-      path: '/dashboard/projects-management',
+      path: "/dashboard/projects-management",
     },
     {
-      name: 'Education Management',
+      name: "Education Management",
       icon: FaGraduationCap,
-      path: '/dashboard/education-management',
+      path: "/dashboard/education-management",
     },
     {
-      name: 'Experience Management',
+      name: "Experience Management",
       icon: FaUser,
-      path: '/dashboard/experience-management',
+      path: "/dashboard/experience-management",
     },
     {
-      name: 'Blogs Management',
+      name: "Blogs Management",
       icon: FaBlog,
-      path: '/dashboard/blogs-management',
+      path: "/dashboard/blogs-management",
     },
     {
-      name: 'Home',
+      name: "Home",
       icon: FaHome,
-      path: '/',
+      path: "/",
     },
   ],
   links: {
-    github: 'https://github.com/Md-Rijwan-Jannat',
-    linkedin: 'https://www.linkedin.com/in/md-rijwan-jannat47',
-    facebook: 'https://www.facebook.com/mdrijwanjannat',
-    twitter: 'https://x.com/JannatRijw51454',
-    discord: 'https://discord.com/channels/r.j.rijwan',
+    github: "https://github.com/Devloper-solaiman",
+    linkedin: "https://www.linkedin.com/in/solaiman-dev/",
+    facebook: "https://www.facebook.com/profile.php?id=100034976902391",
+    twitter: "https://x.com/solaimandevlop1",
+    discord: "https://discord.gg/49AxDPnM",
     resume:
-      'https://drive.google.com/file/d/1YIFQMCuGD8NCdpW4XuSH_01Ft9bPh_2V/view?usp=drive_link',
+      "https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link",
   },
 };

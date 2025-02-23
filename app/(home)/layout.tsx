@@ -10,7 +10,7 @@ import SmoothScrollWrapper from "./_components/ui/ScrollAnimation";
 interface CommonLayoutProps {
   children: ReactNode;
   aboutMe: ReactNode;
-  // education: ReactNode;
+  education: ReactNode;
   experience: ReactNode;
   skills: ReactNode;
   projects: ReactNode;
@@ -26,7 +26,7 @@ const sectionAnimation = {
 export default function CommonLayout({
   children,
   aboutMe,
-  // education,
+  education,
   experience,
   skills,
   projects,
@@ -59,11 +59,6 @@ export default function CommonLayout({
         <div>{aboutMe}</div>
       </Element>
 
-      {/* Education section with animation */}
-      {/* <Element name="education">
-        <div>{education}</div>
-      </Element> */}
-
       {/* Projects section with animation */}
       <Element name="projects">
         <div>{projects}</div>
@@ -73,7 +68,10 @@ export default function CommonLayout({
       <Element name="blogs">
         <div>{myBlogs}</div>
       </Element>
-
+      {/* Education section with animation */}
+      <Element name="education">
+        <div>{education}</div>
+      </Element>
       {/* Contact section with animation */}
       <Element name="contact">
         <div>{contactMe}</div>
