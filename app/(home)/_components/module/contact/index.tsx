@@ -62,10 +62,10 @@ const Contact: React.FC = () => {
       // Use emailjs to send the form data
       emailjs
         .sendForm(
-          'service_a83mwk4',
-          'template_crw6xto',
+          "service_yhyw0i7",
+          "template_fbns2kf",
           form.current as HTMLFormElement,
-          'wTuP0_-qh1sVDIcjH'
+          "a5kJNbBsO0YAgckt-",
         )
         .then(
           (result) => {

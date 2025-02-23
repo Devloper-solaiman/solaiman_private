@@ -33,13 +33,15 @@ const EducationCard = ({ education }: EducationCardProps) => {
 
   return (
     <div className="bg-default-50 border border-default-200 rounded-lg p-6">
-      <Image
-        alt="education image"
-        height={300}
-        width={300}
-        src={education.institution}
-        className="rounded-md"
-      />
+      <div>
+        <Image
+          alt="education image"
+          height={300}
+          width={300}
+          src={education.institution}
+          className="rounded-md  w-[300px] h-[200px] object-cover"
+        />
+      </div>
       <h3 className="text-2xl font-bold text-warning mb-2">
         {education.degree}
       </h3>

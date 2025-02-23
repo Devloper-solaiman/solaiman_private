@@ -5,7 +5,10 @@ import React, { useState } from "react";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { Copy, Check } from "lucide-react";
 import NavButtons from "../../ui/navButtons";
+import dynamic from "next/dynamic";
+import contactImage from "./contact.json"
 
+const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 const ContactLeft: React.FC = () => {
   const [copied, setCopied] = useState<{ whatsapp: boolean; email: boolean }>({
     whatsapp: false,
@@ -68,7 +71,13 @@ const ContactLeft: React.FC = () => {
 
       {/* Animated Image */}
       <div className="flex items-center justify-center">
-        <Image
+        <Player
+          play
+          loop
+          animationData={contactImage}
+          style={{ width: 300, height: 280 }}
+        />
+        {/* <Image
           className="w-full h-[268px] object-cover rounded-lg"
           src={
             "https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif"
@@ -76,7 +85,7 @@ const ContactLeft: React.FC = () => {
           width={500}
           height={500}
           alt="animation"
-        />
+        /> */}
       </div>
     </div>
   );
