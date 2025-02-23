@@ -9,8 +9,11 @@ import { useGetSkillsByCategory } from '@/hooks/skills.hook';
 import { TSkill } from '@/types';
 import { SkillCategory } from '@/constants/skills.constants';
 import Image from 'next/image';
-import skillImage from '../../../../../assets/mainIconsdark.svg';
+import skillImage from './me.json';
+// import skillImage from '../../../../../assets/mainIconsdark.svg';
+import dynamic from 'next/dynamic';
 
+const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 const SkillCategories: FC = () => {
   const categories = Object.values(SkillCategory);
   const [selectedCategory, setSelectedCategory] = useState<string>('Frontend');
@@ -56,7 +59,13 @@ const SkillCategories: FC = () => {
         ))}
       </Tabs>
       <div className="absolute right-0 -top-20">
-        <Image width={500} height={500} src={skillImage} alt="skill" />
+        <Player
+          play
+          loop
+          animationData={skillImage}
+          style={{ width: 500, height: 500 }}
+        />
+        {/* <Image width={500} height={500} src={skillImage} alt="skill" /> */}
       </div>
     </div>
   );
