@@ -3,14 +3,11 @@
 import { Tab, Tabs } from '@nextui-org/tabs';
 import { FC, useState } from 'react';
 import SkillsSkeleton from '../../ui/skeleton/skillSkeleton';
-import { Title } from '../../ui/title';
 import SkillsCard from './skillsCard';
 import { useGetSkillsByCategory } from '@/hooks/skills.hook';
 import { TSkill } from '@/types';
 import { SkillCategory } from '@/constants/skills.constants';
-import Image from 'next/image';
 import skillImage from './me.json';
-// import skillImage from '../../../../../assets/mainIconsdark.svg';
 import dynamic from 'next/dynamic';
 
 const Player = dynamic(() => import("react-lottie-player"), { ssr: false });

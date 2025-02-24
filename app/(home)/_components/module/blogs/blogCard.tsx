@@ -3,7 +3,6 @@ import { Avatar } from '@nextui-org/avatar';
 import Image from 'next/image';
 import { TBlog } from '@/types';
 import createDOMPurify from 'dompurify';
-import { motion } from 'framer-motion';
 import { JSDOM } from 'jsdom';
 
 // Create a DOMPurify instance for sanitizing HTML

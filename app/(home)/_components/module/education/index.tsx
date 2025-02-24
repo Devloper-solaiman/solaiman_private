@@ -32,28 +32,30 @@ const EducationCard = ({ education }: EducationCardProps) => {
   };
 
   return (
-    <div className="bg-default-50 border border-default-200 rounded-lg p-6">
-      <div>
+    <div className="bg-default-50 border border-default-200 flex flex-col md:flex-row gap-3 rounded-lg p-6">
+      <div className="w-full md:w-[40%] flex-shrink-0">
         <Image
           alt="education image"
-          height={300}
-          width={300}
+          height={250}
+          width={250}
           src={education.institution}
-          className="rounded-md  w-[300px] h-[200px] object-cover"
+          className="rounded-md  w-[250px] h-[200px] object-cover"
         />
       </div>
-      <h3 className="text-2xl font-bold text-warning mb-2">
-        {education.degree}
-      </h3>
-      <p className="text-default-600 mb-4">
-        {isExpanded
-          ? education.description
-          : `${education.description.substring(0, maxDescriptionLength)}...`}
-        <button className="text-warning text-xs ml-2" onClick={toggleExpand}>
-          {isExpanded ? "See Less" : "See More"}
-        </button>
-      </p>
+      <div className="w-full md:w-[60%]">
+        <h3 className="text-xl font-bold text-warning mb-2">
+          {education.degree}
+        </h3>
+        <p className="text-default-600">
+          {isExpanded
+            ? education.description
+            : `${education.description.substring(0, maxDescriptionLength)}...`}
+          <button className="text-warning text-xs ml-2" onClick={toggleExpand}>
+            {isExpanded ? "See Less" : "See More"}
+          </button>
+        </p>
 
+      </div>
     </div>
   );
 };

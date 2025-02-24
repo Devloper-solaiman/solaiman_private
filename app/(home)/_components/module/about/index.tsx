@@ -37,7 +37,7 @@ export default function About({ about, projects, skills, blogs }: TAboutProps) {
         <p className="text-sm text-default-500 mb-4">
           Address: {about.address + ',' + about.country}
         </p>
-        <p className="text-default-600 mb-10 text-sm">{about.description}</p>
+        <p className="text-default-600 mb-10 px-3 text-justify text-sm">{about.description}</p>
 
         {/* Experience, Projects, Companies Worked */}
         <AchievementsSection
