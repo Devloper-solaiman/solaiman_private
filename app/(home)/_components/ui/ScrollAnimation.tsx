@@ -10,8 +10,10 @@ const SmoothScrollWrapper: React.FC = () => {
       event.preventDefault();
 
       const targetId = $(event.currentTarget).attr("href"); // Get the href attribute
+
       if (targetId) {
         const targetElement = $(targetId);
+
         if (targetElement.length) {
           $("html, body").animate(
             {
@@ -26,6 +28,7 @@ const SmoothScrollWrapper: React.FC = () => {
 
     // Attach click event to anchor tags with href starting with '#'
     const anchorTags = $('a[href^="#"]');
+
     anchorTags.on("click", handleSmoothScroll);
 
     // Cleanup on component unmount

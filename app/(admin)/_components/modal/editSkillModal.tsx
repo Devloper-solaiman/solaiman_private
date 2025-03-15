@@ -148,15 +148,15 @@ export default function EditSkillModal({ skill }: TEditSkillModalProps) {
                   )}
 
                   <label
-                    htmlFor="upload"
                     className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
+                    htmlFor="upload"
                   >
                     <FaImage className="text-2xl" />
                     <p>Upload Icon</p>
                     <Input
-                      id="upload"
                       accept="image/*"
                       className="hidden"
+                      id="upload"
                       type="file"
                       variant="bordered"
                       onChange={handleFileUpload}

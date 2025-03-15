@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   Modal,
@@ -9,7 +8,7 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
-import { FaImage, FaPlus, FaTrash } from "react-icons/fa";
+import { FaImage, FaPlus } from "react-icons/fa";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "@nextui-org/input";
 import Image from "next/image";
@@ -74,6 +73,7 @@ export default function AddProjectModal() {
     const newImages = uploadedImages.filter(
       (_, imgIndex) => imgIndex !== index,
     );
+
     setUploadedImages(newImages);
     setValue("images", newImages); // update form state
   };
@@ -81,6 +81,7 @@ export default function AddProjectModal() {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     if (data.images.length === 0) {
       alert("At least one image is required.");
+
       return;
     }
 
@@ -208,16 +209,16 @@ export default function AddProjectModal() {
 
                   {/* Image Upload */}
                   <label
-                    htmlFor="file-upload"
                     className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
+                    htmlFor="file-upload"
                   >
                     <FaImage className="text-2xl" />
                     <p>Upload Images</p>
                     <Input
-                      id="file-upload"
                       multiple
                       accept="image/*"
                       className="hidden"
+                      id="file-upload"
                       type="file"
                       variant="bordered"
                       onChange={handleFileUpload}
@@ -244,9 +245,9 @@ export default function AddProjectModal() {
                             width={100}
                           />
                           <button
+                            className="absolute -top-2 -right-2 size-4 bg-red-600 text-white rounded-full p-1"
                             type="button"
                             onClick={() => handleDeleteImage(index)}
-                            className="absolute -top-2 -right-2 size-4 bg-red-600 text-white rounded-full p-1"
                           >
                             X
                           </button>

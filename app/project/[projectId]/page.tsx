@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Navbar } from "@/app/(home)/_components/ui/navbar";
 import {
   getAllProjects,

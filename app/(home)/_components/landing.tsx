@@ -1,11 +1,12 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import AnimatedButton from './ui/button';
-import $ from 'jquery';
-import ImageBox from './module/banner/imageBox';
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import $ from "jquery";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+
+import AnimatedButton from "./ui/button";
+import ImageBox from "./module/banner/imageBox";
 
 const Landing = () => {
   // const [text] = useTypewriter({
@@ -23,24 +24,24 @@ const Landing = () => {
 
   useEffect(() => {
     // jQuery for advanced image animations
-    $('.profile-img').hover(
+    $(".profile-img").hover(
       function () {
         $(this).css({
-          transform: 'scale(1.1)',
-          transition: 'transform 0.3s ease-in-out',
+          transform: "scale(1.1)",
+          transition: "transform 0.3s ease-in-out",
         });
       },
       function () {
         $(this).css({
-          transform: 'scale(1)',
+          transform: "scale(1)",
         });
-      }
+      },
     );
 
-    $('.profile-img').click(function () {
+    $(".profile-img").click(function () {
       $(this).css({
-        boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.5)',
-        transition: 'box-shadow 0.3s ease-in-out',
+        boxShadow: "0 0 15px 5px rgba(255, 255, 255, 0.5)",
+        transition: "box-shadow 0.3s ease-in-out",
       });
     });
   }, []);
@@ -66,12 +67,13 @@ const Landing = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-default-800">
                 Hello, I&apos;m{" "}
-                <span className="text-[#b1791f]">MD <span className="font-GreatVibes">S</span>olaiman</span>
+                <span className="text-[#b1791f]">
+                  MD <span className="font-GreatVibes">S</span>olaiman
+                </span>
               </h1>
 
               <h2 className="text-xl md:text-3xl text-default-700 mt-4">
                 A Frontend <span className="font-GreatVibes">D</span>eveloper.
-
               </h2>
               <p className="text-default-700 mt-6 leading-relaxed">
                 As a Font End developer, I combine technical expertise with a

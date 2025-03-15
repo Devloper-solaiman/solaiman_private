@@ -144,15 +144,15 @@ export default function AddSkillModal() {
                   )}
 
                   <label
-                    htmlFor="icon-upload" // Associate label with input
                     className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
+                    htmlFor="icon-upload" // Associate label with input
                   >
                     <FaImage className="text-2xl" />
                     <p>Upload Icon</p>
                     <Input
-                      id="icon-upload" // ID matching the label's htmlFor
                       accept="image/*"
                       className="hidden"
+                      id="icon-upload" // ID matching the label's htmlFor
                       type="file"
                       variant="bordered"
                       onChange={handleFileUpload}

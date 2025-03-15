@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, useAnimation } from 'framer-motion';
-import { IoDownload } from 'react-icons/io5';
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { IoDownload } from "react-icons/io5";
 
 interface AnimatedButtonProps {
   href: string;
@@ -13,7 +13,7 @@ interface AnimatedButtonProps {
   textColor?: string;
   borderColor?: string;
   shadowColor?: string;
-  target?: '_self' | '_blank';
+  target?: "_self" | "_blank";
   rel?: string;
 }
 
@@ -21,12 +21,12 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   href,
   text,
   IconComponent = IoDownload,
-  bgColor = 'bg-white',
-  textColor = 'text-black',
-  borderColor = 'border-default-200',
-  shadowColor = 'shadow-md',
-  target = '_blank',
-  rel = 'noopener noreferrer',
+  bgColor = "bg-white",
+  textColor = "text-black",
+  borderColor = "border-default-200",
+  shadowColor = "shadow-md",
+  target = "_blank",
+  rel = "noopener noreferrer",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
@@ -49,16 +49,16 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
 
   const handleHoverStart = () => {
     setIsHovered(true);
-    controls.start('hover');
+    controls.start("hover");
   };
 
   const handleHoverEnd = () => {
     setIsHovered(false);
-    controls.start('initial');
+    controls.start("initial");
   };
 
   const handleTap = () => {
-    controls.start('tap');
+    controls.start("tap");
   };
 
   return (
@@ -76,8 +76,8 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
         <Link
           className={`flex items-center gap-2 border whitespace-nowrap ${borderColor} rounded-full px-4 py-2 ${bgColor} ${textColor} font-medium ${shadowColor} hover:shadow-lg transition-shadow duration-300`}
           href={href}
-          target={target}
           rel={rel}
+          target={target}
         >
           <motion.span variants={iconVariants}>
             {IconComponent && <IconComponent className="text-xl" />}

@@ -1,9 +1,9 @@
 import React from "react";
 
 import Education from "../_components/module/education";
+import { Title } from "../_components/ui/title";
 
 import { getAllEducations } from "@/service/educationService/educationService";
-import { Title } from "../_components/ui/title";
 
 export default async function EducationPage() {
   const data = await getAllEducations();

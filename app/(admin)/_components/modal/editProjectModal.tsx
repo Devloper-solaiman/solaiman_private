@@ -77,6 +77,7 @@ export default function EditProjectModal({ project }: TEditProjectModalProps) {
     const newImages = uploadedImages.filter(
       (_, imgIndex) => imgIndex !== index,
     );
+
     setUploadedImages(newImages);
     setValue("images", newImages); // update form state
   };
@@ -218,16 +219,16 @@ export default function EditProjectModal({ project }: TEditProjectModalProps) {
 
                   {/* Image Upload */}
                   <label
-                    htmlFor="file-upload"
                     className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
+                    htmlFor="file-upload"
                   >
                     <FaImage className="text-2xl" />
                     <p>Upload Images</p>
                     <Input
-                      id="file-upload"
                       multiple
                       accept="image/*"
                       className="hidden"
+                      id="file-upload"
                       type="file"
                       variant="bordered"
                       onChange={handleFileUpload}
@@ -254,9 +255,9 @@ export default function EditProjectModal({ project }: TEditProjectModalProps) {
                             width={100}
                           />
                           <button
+                            className="absolute -top-2 -right-2 size-4 bg-red-600 text-white rounded-full p-1"
                             type="button"
                             onClick={() => handleDeleteImage(index)}
-                            className="absolute -top-2 -right-2 size-4 bg-red-600 text-white rounded-full p-1"
                           >
                             X
                           </button>

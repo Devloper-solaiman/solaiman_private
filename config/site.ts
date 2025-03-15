@@ -6,7 +6,7 @@ import {
   FaProjectDiagram,
   FaBlog,
   FaHome,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 export const siteConfig = {
   name: "Md Solaiman",

@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { Copy, Check } from "lucide-react";
-import NavButtons from "../../ui/navButtons";
 import dynamic from "next/dynamic";
-import contactImage from "./contact.json"
+
+import NavButtons from "../../ui/navButtons";
+
+import contactImage from "./contact.json";
 
 const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 const ContactLeft: React.FC = () => {
@@ -43,13 +45,13 @@ const ContactLeft: React.FC = () => {
       {/* Email */}
       <div className="flex items-center space-x-2">
         <Image
+          alt="gmail"
           className="size-5"
+          height={20}
           src={
             "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
           }
           width={20}
-          height={20}
-          alt="gmail"
         />
         <p className="text-default-700">Email: nsbd500@gmail.com</p>
         <button
@@ -72,8 +74,8 @@ const ContactLeft: React.FC = () => {
       {/* Animated Image */}
       <div className="flex items-center justify-center">
         <Player
-          play
           loop
+          play
           animationData={contactImage}
           style={{ width: 300, height: 280 }}
         />

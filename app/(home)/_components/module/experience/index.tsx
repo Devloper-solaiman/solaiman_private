@@ -2,7 +2,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
+
 import { Title } from "../../ui/title";
+
 import { TExperiences } from "@/types/experiencesTypes";
 
 const ClientExperience = dynamic(() => import("./experienceCard"), {

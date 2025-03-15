@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 import { TEducation } from "@/types";
-import Image from "next/image";
 
 interface TEducationProps {
   educations: TEducation[];
@@ -36,10 +36,10 @@ const EducationCard = ({ education }: EducationCardProps) => {
       <div className="w-full md:w-[40%] flex-shrink-0">
         <Image
           alt="education image"
-          height={250}
-          width={250}
-          src={education.institution}
           className="rounded-md  w-[250px] h-[200px] object-cover"
+          height={250}
+          src={education.institution}
+          width={250}
         />
       </div>
       <div className="w-full md:w-[60%]">
@@ -54,7 +54,6 @@ const EducationCard = ({ education }: EducationCardProps) => {
             {isExpanded ? "See Less" : "See More"}
           </button>
         </p>
-
       </div>
     </div>
   );

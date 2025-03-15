@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import Experience from '../_components/module/experience';
+import Experience from "../_components/module/experience";
 
-import { getAllExperiences } from '@/service/experienceService/experienceService';
+import { getAllExperiences } from "@/service/experienceService/experienceService";
 
 export default async function ExperiencePage() {
   const experienceData = await getAllExperiences();

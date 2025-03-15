@@ -1,19 +1,22 @@
-'use client';
+"use client";
 
-import { Tab, Tabs } from '@nextui-org/tabs';
-import { FC, useState } from 'react';
-import SkillsSkeleton from '../../ui/skeleton/skillSkeleton';
-import SkillsCard from './skillsCard';
-import { useGetSkillsByCategory } from '@/hooks/skills.hook';
-import { TSkill } from '@/types';
-import { SkillCategory } from '@/constants/skills.constants';
-import skillImage from './me.json';
-import dynamic from 'next/dynamic';
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { FC, useState } from "react";
+import dynamic from "next/dynamic";
+
+import SkillsSkeleton from "../../ui/skeleton/skillSkeleton";
+
+import SkillsCard from "./skillsCard";
+import skillImage from "./me.json";
+
+import { useGetSkillsByCategory } from "@/hooks/skills.hook";
+import { TSkill } from "@/types";
+import { SkillCategory } from "@/constants/skills.constants";
 
 const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 const SkillCategories: FC = () => {
   const categories = Object.values(SkillCategory);
-  const [selectedCategory, setSelectedCategory] = useState<string>('Frontend');
+  const [selectedCategory, setSelectedCategory] = useState<string>("Frontend");
 
   // Fetch data based on selected category
   const { data, isLoading } = useGetSkillsByCategory(selectedCategory);
@@ -27,11 +30,11 @@ const SkillCategories: FC = () => {
     <div className="flex flex-col gap-5 relative">
       <Tabs
         aria-label="Skill Categories"
+        className="z-10 flex items-center justify-center"
         color="warning"
         selectedKey={selectedCategory}
         variant="bordered"
         onSelectionChange={(key) => handleCategoryChange(key as string)}
-        className="z-10 flex items-center justify-center"
       >
         {categories.map((category) => (
           <Tab key={category} title={category} value={category}>
@@ -57,8 +60,8 @@ const SkillCategories: FC = () => {
       </Tabs>
       <div className="absolute right-0 -top-20">
         <Player
-          play
           loop
+          play
           animationData={skillImage}
           style={{ width: 500, height: 500 }}
         />

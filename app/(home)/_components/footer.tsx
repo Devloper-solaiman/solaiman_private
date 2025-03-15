@@ -1,11 +1,12 @@
 "use client";
 
-import NavButtons from "./ui/navButtons";
-import { siteConfig } from "@/config/site";
-import { linkVariants } from "./ui/animation";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
+
+import NavButtons from "./ui/navButtons";
+
+import { siteConfig } from "@/config/site";
 
 export default function Footer() {
   const router = useRouter();

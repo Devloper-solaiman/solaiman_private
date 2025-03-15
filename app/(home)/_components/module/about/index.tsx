@@ -1,14 +1,13 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
-import { Title } from '../../ui/title';
-import AnimatedButton from '../../ui/button';
+import AnimatedButton from "../../ui/button";
 
-import { TAbout, TBlog, TProject, TSkill } from '@/types';
-import Image from 'next/image';
-import AchievementsSection from './achivement';
-import { Chip } from '@nextui-org/chip';
+import AchievementsSection from "./achivement";
+
+import { TAbout, TBlog, TProject, TSkill } from "@/types";
 
 interface TAboutProps {
   about: TAbout;
@@ -23,11 +22,11 @@ export default function About({ about, projects, skills, blogs }: TAboutProps) {
       {/* Image Section */}
       <div className="w-full lg:w-1/3">
         <Image
-          width={500}
-          height={500}
           alt={about.me.name}
           className="w-full h-full lg:h-[350px] rounded-lg shadow-lg object-cover"
-          src={about.image || 'https://example.com/my-image.jpg'}
+          height={500}
+          src={about.image || "https://example.com/my-image.jpg"}
+          width={500}
         />
       </div>
 
@@ -35,25 +34,27 @@ export default function About({ about, projects, skills, blogs }: TAboutProps) {
       <div className="w-full lg:w-2/3 text-center md:text-left space-y-2">
         <h2 className="text-xl md:text-3xl font-bold">{about.title}</h2>
         <p className="text-sm text-default-500 mb-4">
-          Address: {about.address + ',' + about.country}
+          Address: {about.address + "," + about.country}
         </p>
-        <p className="text-default-600 mb-10 px-3 text-justify text-sm">{about.description}</p>
+        <p className="text-default-600 mb-10 px-3 text-justify text-sm">
+          {about.description}
+        </p>
 
         {/* Experience, Projects, Companies Worked */}
         <AchievementsSection
+          blogs={blogs}
           projects={projects}
           skills={skills}
-          blogs={blogs}
         />
 
         {/* Download CV Button */}
         <AnimatedButton
           bgColor="bg-transparent"
           borderColor="border-warning-500 my-5"
-          textColor="text-[#F5A524]"
           href="https://drive.google.com/file/d/1x6DLawdKCuVhNGW4qnHnD3m6OYkd2fDH/view?usp=drive_link"
-          text="View Resume"
           target="_blank"
+          text="View Resume"
+          textColor="text-[#F5A524]"
         />
       </div>
     </section>

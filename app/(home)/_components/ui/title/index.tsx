@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
 interface TitleProps {
@@ -15,9 +14,9 @@ export const Title: React.FC<TitleProps> = ({ title1, title2 }) => {
       <div className="flex items-center justify-start gap-2 text-lg md:text-2xl text-default-900 font-semibold relative">
         <h2>{title1}</h2>
         <motion.div
+          animate={{ opacity: 1 }}
           className="absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r from-warning to-transparent"
           initial={{ opacity: 0.5 }}
-          animate={{ opacity: 1 }}
           transition={{
             duration: 1.5,
             repeat: Infinity,

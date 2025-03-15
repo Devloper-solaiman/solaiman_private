@@ -95,8 +95,8 @@ export default function AddBlogModal() {
                 <form className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
                   <div className="space-y-2">
                     <label
-                      htmlFor="content"
                       className="block text-sm font-medium"
+                      htmlFor="content"
                     >
                       Content
                     </label>
@@ -116,15 +116,15 @@ export default function AddBlogModal() {
                   )}
 
                   <label
-                    htmlFor="image"
                     className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
+                    htmlFor="image"
                   >
                     <FaImage className="text-2xl" />
                     <p>Upload Image</p>
                     <Input
-                      id="image"
                       accept="image/*"
                       className="hidden"
+                      id="image"
                       type="file"
                       variant="bordered"
                       onChange={handleFileUpload}

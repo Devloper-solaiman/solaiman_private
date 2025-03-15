@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -9,38 +9,38 @@ import {
   NavbarItem,
   NavbarMenuItem,
   NavbarBrand,
-} from '@nextui-org/navbar';
-import { Link as ScrollLink } from 'react-scroll';
-import { motion } from 'framer-motion';
-import clsx from 'clsx';
+} from "@nextui-org/navbar";
+import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
+import clsx from "clsx";
+import { useRouter } from "next/navigation";
+import { FaDashcube } from "react-icons/fa";
 
-import { linkVariants, menuVariants } from './animation';
-import Logo from './logo';
-import NavButtons from './navButtons';
-import AnimatedButton from './button';
+import { linkVariants, menuVariants } from "./animation";
+import Logo from "./logo";
+import NavButtons from "./navButtons";
+import AnimatedButton from "./button";
 
-import { ThemeSwitch } from '@/app/(home)/_components/ui/theme-switch';
-import { siteConfig } from '@/config/site';
-import { useRouter } from 'next/navigation';
-import { FaDashcube } from 'react-icons/fa';
+import { ThemeSwitch } from "@/app/(home)/_components/ui/theme-switch";
+import { siteConfig } from "@/config/site";
 
 const underlineVariants = {
   initial: { width: 0 },
   whileHover: {
-    width: '100%',
-    transition: { duration: 0.3, ease: 'easeInOut' },
+    width: "100%",
+    transition: { duration: 0.3, ease: "easeInOut" },
   },
 };
 
 export const Navbar = () => {
   const router = useRouter();
   const [shouldHideOnScroll, setShouldHideOnScroll] = useState(true);
-  const [style, setStyle] = useState('top-4');
+  const [style, setStyle] = useState("top-4");
 
   const handleLinkClick = () => {
     setShouldHideOnScroll(false);
-    setStyle('-top-4');
-    router.push('/');
+    setStyle("-top-4");
+    router.push("/");
   };
 
   return (
@@ -61,14 +61,14 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <motion.div
                 animate="animate"
+                className="relative"
                 initial="initial"
                 variants={linkVariants}
                 whileHover="whileHover"
-                className="relative"
               >
                 <ScrollLink
                   className={clsx(
-                    'cursor-pointer text-default-800 hover:text-warning'
+                    "cursor-pointer text-default-800 hover:text-warning",
                   )}
                   color="black"
                   duration={500}
@@ -103,12 +103,12 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem className="hidden sm:flex gap-2">
           <AnimatedButton
-            href="/dashboard"
-            text="Dashboard"
-            target="_self"
+            IconComponent={FaDashcube}
             bgColor="bg-transparent"
             borderColor="text-warning border-warning-500"
-            IconComponent={FaDashcube}
+            href="/dashboard"
+            target="_self"
+            text="Dashboard"
           />
         </NavbarItem>
       </NavbarContent>
@@ -133,13 +133,13 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item}-${index}`}>
               <motion.div
                 animate="animate"
+                className="relative"
                 initial="initial"
                 variants={linkVariants}
                 whileHover="whileHover"
-                className="relative"
               >
                 <ScrollLink
-                  className={clsx('cursor-pointer text-foreground')}
+                  className={clsx("cursor-pointer text-foreground")}
                   duration={1500}
                   offset={-70}
                   smooth={true}

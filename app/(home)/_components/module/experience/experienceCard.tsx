@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { format } from "date-fns";
+
 import { TExperiences } from "@/types/experiencesTypes";
 
 interface TExperiencesProps {
