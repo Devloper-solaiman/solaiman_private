@@ -52,7 +52,7 @@ const Landing = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           {/* Profile Image */}
           <ImageBox
-            imageUrl="https://i.ibb.co.com/w0pX9dk/silaimanp1.png"
+            imageUrl="https://res.cloudinary.com/dcbvputnw/image/upload/v1744121379/x72t6yhilyd1pokms3ca.png"
             link="#contact"
             name="Md Solaiman"
             title="Font End Developer"
