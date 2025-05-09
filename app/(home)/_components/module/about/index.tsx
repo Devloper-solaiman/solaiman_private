@@ -51,7 +51,7 @@ export default function About({ about, projects, skills, blogs }: TAboutProps) {
         <AnimatedButton
           bgColor="bg-transparent"
           borderColor="border-warning-500 my-5"
-          href="https://drive.google.com/file/d/1x6DLawdKCuVhNGW4qnHnD3m6OYkd2fDH/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view"
           target="_blank"
           text="View Resume"
           textColor="text-[#F5A524]"
