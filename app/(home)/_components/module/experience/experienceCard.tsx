@@ -11,27 +11,29 @@ interface TExperiencesProps {
 
 const ClientExperience: React.FC<TExperiencesProps> = ({ experiences }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div>
       {experiences.map((exp) => (
         <div
           key={exp._id}
-          className="bg-default-50 rounded-lg p-6 flex flex-col items-start justify-start border border-default-200 max-w-3xl"
+          className="rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-start justify-start border border-default-200"
         >
-          <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
-          <p className="text-default-600 font-medium">{exp.company}</p>
-          <p className="text-sm text-default-500 mb-4">{exp.location}</p>
-          <p className="text-sm text-default-500 mb-4">
-            {format(new Date(exp.startDate), "dd MMM yyyy")} -{" "}
-            {exp.endDate
-              ? format(new Date(exp.endDate), "dd MMM yyyy")
-              : "Present"}
-          </p>
-          <p className="text-default-700 mb-4 text-start">{exp.description}</p>
-          <div className="flex flex-wrap items-start gap-3">
+          <div >
+            <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
+            <p className="text-default-600 font-medium">{exp.company}</p>
+            <p className="text-sm text-default-500 mb-4">{exp.location}</p>
+            <p className="text-sm text-default-500 mb-4">
+              {format(new Date(exp.startDate), "dd MMM yyyy")} -{" "}
+              {exp.endDate
+                ? "Present"
+                : format(new Date(exp.endDate), "dd MMM yyyy")}
+            </p>
+            <p className="text-default-700 text-justify">{exp.description}</p>
+          </div>
+          <div className="flex flex-wrap items-center justify-between px-5 gap-3">
             {exp.technologies.map((tech) => (
               <div
                 key={tech._id}
-                className="flex items-center gap-2 border border-default-200 rounded px-3 py-1"
+                className="flex items-center gap-2 border border-default-200 rounded px-3 mt-5 py-1"
               >
                 <Image
                   alt={tech.name}

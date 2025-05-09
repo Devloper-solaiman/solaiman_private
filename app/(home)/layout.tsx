@@ -49,6 +49,11 @@ export default function CommonLayout({
         <div>{skills}</div>
       </Element>
 
+      {/* Projects section with animation */}
+      <Element name="projects">
+        <div>{projects}</div>
+      </Element>
+
       {/* Experience section with animation */}
       <Element name="experience">
         <div>{experience}</div>
@@ -59,10 +64,6 @@ export default function CommonLayout({
         <div>{aboutMe}</div>
       </Element>
 
-      {/* Projects section with animation */}
-      <Element name="projects">
-        <div>{projects}</div>
-      </Element>
 
       {/* Blogs section with animation */}
       <Element name="blogs">
