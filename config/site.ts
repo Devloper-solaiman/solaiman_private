@@ -10,10 +10,10 @@ import {
 
 export const siteConfig = {
   name: "Md Solaiman",
-  ogImage: "https://demo.jpg",
-  url: "www.solaiman.dev",
+  ogImage: "https://res.cloudinary.com/dcbvputnw/image/upload/v1741902681/i11quq3sduojoilfohr9.jpg",
+  url: "https://solaimannsit.vercel.app",
   description:
-    "Junior Font End Developer specializing in modern web technologies.",
+    "Frontend Developer with a strong focus on modern UI/UX and React ecosystem. Comfortable working with backend technologies — crafting complete, scalable web solutions.",
   navItems: [
     {
       label: "Home",
