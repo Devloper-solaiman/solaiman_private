@@ -85,7 +85,7 @@ const Landing = () => {
               <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
                 <AnimatedButton
                   bgColor="bg-[#8a5604] hover:bg-warning-300"
-                  href="https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1r4NFoHiWSbLeyWKQg9Tcc58ldCwCRH7h/view"
                   target="_blank"
                   text="View Resume"
                   textColor="text-gray-100 hover:text-gray-700"
@@ -95,9 +95,9 @@ const Landing = () => {
                   IconComponent={AiOutlineFundProjectionScreen}
                   bgColor="bg-transparent"
                   borderColor="border-warning-300"
-                  href="#projects"
+                  href="https://drive.google.com/file/d/1pXTlZxLrMbZWNWJw_qU36xOH4b4t_AEi/view"
                   target="_self"
-                  text="Explore Projects"
+                  text="Certificate"
                   textColor="text-[#FFBF00]"
                 />
               </div>

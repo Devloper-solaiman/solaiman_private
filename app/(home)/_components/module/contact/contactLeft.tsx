@@ -29,10 +29,10 @@ const ContactLeft: React.FC = () => {
       {/* WhatsApp */}
       <div className="flex items-center space-x-2 mb-2">
         <FaWhatsapp className="text-green-500" size={22} />
-        <p className="text-default-700">WhatsApp: +8801789094002</p>
+        <p className="text-default-700">WhatsApp: +880 1580 679 507</p>
         <button
           className="ml-2 text-gray-500 hover:text-green-500 transition-all"
-          onClick={() => handleCopy("+8801789094002", "whatsapp")}
+          onClick={() => handleCopy("+8801580679507", "whatsapp")}
         >
           {copied.whatsapp ? (
             <Check className="text-green-500" size={20} />
@@ -53,10 +53,10 @@ const ContactLeft: React.FC = () => {
           }
           width={20}
         />
-        <p className="text-default-700">Email: nsbd500@gmail.com</p>
+        <p className="text-default-700">Email: devsolaiman@gmail.com</p>
         <button
           className="ml-2 text-gray-500 hover:text-blue-500 transition-all"
-          onClick={() => handleCopy("nsbd500@gmail.com", "email")}
+          onClick={() => handleCopy("devsolaiman@gmail.com", "email")}
         >
           {copied.email ? (
             <Check className="text-blue-500" size={20} />
