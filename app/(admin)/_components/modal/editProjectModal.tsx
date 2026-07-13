@@ -89,14 +89,17 @@ export default function EditProjectModal({ project }: TEditProjectModalProps) {
       return;
     }
     // Convert selected technologies Set to an array
+    
     data.technologies = Array.from(selectedTechnologies) as string[];
+    const { _id, createdAt, updatedAt, __v, ...cleanData } = data;
 
     const projectData: TUpdateData = {
       id: project?._id,
-      data: data,
+      data: cleanData,
     };
 
     editProjectFn(projectData);
+    
   };
 
   return (
